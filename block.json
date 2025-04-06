@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "stacked-cards-block/stacked-cards",
+    "version": "1.0.0",
+    "title": "Stacked Cards",
+    "category": "design",
+    "description": "Create stacked cards with sticky positioning",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "cards": {
+            "type": "array",
+            "default": []
+        },
+        "align": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "textdomain": "stacked-cards-block",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/frontend.css"
+} 

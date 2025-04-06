@@ -1,0 +1,37 @@
+.wp-block-stacked-cards-block-stacked-cards {
+    position: relative;
+    min-height: 100vh;
+
+    .stacked-cards-wrapper {}
+
+    .stacked-cards {
+        position: relative;
+        margin-bottom: 12rem;
+        
+        > .wp-block-group {
+            position: sticky;
+            top: 6rem;
+            transform-origin: center top;
+
+            &:first-child{
+                z-index: 30;
+                margin-bottom: 2rem;
+            }
+
+            &:last-child{
+                margin-bottom: 6rem;
+            }
+
+            // Create the stacked effect
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    z-index: 10+$i;
+                    top: (#{(64 + ($i - 1) * 42)}px);   
+                    transform: translateY(#{($i - 1) * 2}px);           
+                }
+            }
+
+           
+        }
+    }
+} 
